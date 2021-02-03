@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+* ::before,
+* ::after {
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid black;
+}
+
+/*add font family to body*/
+
+body {
+  font-family: 'AvenirNext LT Pro', sans-serif;
+  margin: 0;
+}

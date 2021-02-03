@@ -1,1 +1,4 @@
+#Ignore extra VScode 
 .vscode
+#Ignore SASS map files
+*.css.map
