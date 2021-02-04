@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro Demi";
+  src: url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro Bold";
+  src: url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   box-sizing: border-box;
 }
@@ -10,49 +38,174 @@ html {
   border: 1px solid black;
 }
 
-/*add font family to body*/
 body {
   font-family: "AvenirNext LT Pro", sans-serif;
+  color: #323232;
   margin: 0;
 }
 
-.main-nav {
+.main-navigation {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   color: #FFFFFF;
   background-color: #323232;
   height: 5rem;
+  width: 100vw;
 }
-.main-nav__title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 400;
+.main-navigation__title {
+  margin: 0;
+  padding-top: 0.5rem;
 }
-.main-nav__list {
+.main-navigation__list {
   list-style: none;
+  padding: 0;
+  display: flex;
   width: 100%;
 }
-.main-nav___item {
-  display: inline-flex;
-}
-.main-nav__link {
+.main-navigation__link {
   text-decoration: none;
   color: #FFFFFF;
+  padding: 0.5rem 2.75rem;
+}
+
+.bio {
+  font-family: "AvenirNext LT Pro Demi";
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.shows {
+  color: #E1E1E1;
 }
 
 .hero {
   width: 100%;
-  height: 6.4375rem;
+  height: 11.4375rem;
   background-image: url(../assets/images/djboard.jpeg);
   background-size: cover;
   background-position: cover;
+  position: relative;
 }
 .hero__text {
   color: #FFFFFF;
+  font-size: 1.5rem;
+  font-family: "AvenirNext LT Pro Bold";
+  margin: 8%;
+  position: absolute;
+  top: 2rem;
+  line-height: 2rem;
+}
+
+.about {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
+  margin: 1rem;
+}
+.about__title {
+  font-family: "AvenirNext LT Pro Bold";
+  margin: 1rem 0 0.75rem 0;
+}
+.about__image {
+  max-width: 100vw;
+  margin: 0.75rem 0 0.75rem 0;
+}
+.about__quote {
+  color: #323232;
+  margin-top: 0.75rem;
+  font-family: "AvenirNext LT Pro Demi";
+}
+.about__artists-names {
+  margin: 2.5rem 0 0.75rem 0;
+  font-family: "AvenirNext LT Pro Demi";
+}
+.about__blurb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.about__blurb-left {
+  margin-bottom: 1rem;
+}
+.about__blurb-right {
+  margin-bottom: 1.5rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #FAFAFA;
+}
+.gallery__title {
+  font-family: "AvenirNext LT Pro Bold";
+  padding: 2rem 0 0 1rem;
+}
+.gallery__images {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 8vw;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+.gallery__item {
+  max-width: 18rem;
+  margin: 0.5rem 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(100%);
+}
+.gallery__item:hover {
+  filter: none;
+}
+@media (min-width: 780px) {
+  .gallery__item {
+    max-width: 60%;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #323232;
+  color: #FFFFFF;
+  padding-left: 0.5rem;
+}
+.footer__title {
+  font-family: "AvenirNext LT Pro Bold";
+}
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer__social {
+  margin: 0 5rem 0 0.5rem;
+  padding: 1rem;
+  display: flex;
+}
+.footer__logo {
+  visibility: hidden;
+}
+.footer__info-boxes {
+  display: flex;
+}
+.footer__info-title {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.footer__details {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.footer__email {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=main.css.map */

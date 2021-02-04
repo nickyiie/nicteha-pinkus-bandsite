@@ -1,3 +1,6 @@
+@use './typography' as *;
+@use './partial' as *;
+
 html {
   box-sizing: border-box;
 }
@@ -10,9 +13,8 @@ html {
   border: 1px solid black;
 }
 
-/*add font family to body*/
-
 body {
   font-family: 'AvenirNext LT Pro', sans-serif;
+  color: $color-primary;
   margin: 0;
 }

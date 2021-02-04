@@ -1,13 +1,13 @@
-@use './partial';
+@use './partial' as *;
 
 @mixin tablet {
-  @media screen and (min-width: $breakpointtablet) {
+  @media (min-width: $breakpointtablet) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: $breakpointdesktop) {
+  @media  (min-width: $breakpointdesktop) {
     @content;
   }
 }
@@ -21,6 +21,6 @@
 @mixin flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 }
+
