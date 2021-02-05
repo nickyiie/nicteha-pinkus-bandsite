@@ -13,9 +13,18 @@
   height: 5rem;
   width: 100vw;
 
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+  }
+
   &__title {
     margin: 0;
     padding-top: .5rem;
+
+    @include tablet {
+      margin: 0 3rem;
+    }
   }
 
   &__list {
@@ -25,18 +34,22 @@
     width:100%;
   }
 
-
   &__link {
     text-decoration: none;
     color: $color-white;
     padding: .5rem 2.75rem;
+
+    @include tablet {
+      margin-right: 3rem; 
+      padding: 1.75rem .5rem;
+    }
   }
 }
 
 
 .bio {
   font-family: 'AvenirNext LT Pro Demi';
-  border-bottom: 2px solid $color-white;
+  border-bottom: 3px solid $color-white;
 }
 .shows {
   color: $color-border;
@@ -49,6 +62,10 @@
   background-position: cover;
   position: relative;
 
+  @include tablet {
+    height: 25rem;
+  }
+
   &__text {
     color: $color-white;
     font-size: 1.5rem;
@@ -57,17 +74,32 @@
     position: absolute;
     top: 2rem;
     line-height: 2rem;
+
+    @include tablet {
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      margin: 1.5rem;
+      top: 25%;
+    }
   }
 }
 
 .about {
   @include flex-column;
   margin: 1rem;
+
+  @include tablet {
+    margin: 1.5rem;
+  }
   
 
   &__title {
     font-family: 'AvenirNext LT Pro Bold';
     margin: 1rem 0 .75rem 0;
+
+    @include tablet {
+      font-size: 2.25rem;
+    }
   }
 
   &__image {
@@ -79,12 +111,25 @@
     color: $color-primary;
     margin-top: .75rem;
     font-family: 'AvenirNext LT Pro Demi';
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__artist {
+    @include tablet {
+      font-size: 1rem;
+    }
   }
 
   &__artists-names {
     margin: 2.5rem 0 .75rem 0;
     font-family: 'AvenirNext LT Pro Demi';
 
+    @include tablet {
+      font-size: 1.5rem;
+    }
   }
 
   &__blurb {
@@ -94,14 +139,32 @@
     flex-wrap: wrap;
     font-size: 0.8125rem;
     line-height: 1.125rem;
+
+    @include tablet {
+      font-size: 0.875rem;
+    }
+
+  @include tablet {
+    flex-direction: row;
+  }
   }
 
   &__blurb-left {
     margin-bottom: 1rem;
+
+    @include tablet {
+      width: 48%;
+      margin: 0 4px 0 0;
+    }
   }
 
   &__blurb-right {
     margin-bottom: 1.5rem;
+
+    @include tablet {
+      width: 48%;
+      margin: 0;
+    }
   }
 }
 
@@ -112,12 +175,22 @@
   &__title {
     font-family: 'AvenirNext LT Pro Bold';
     padding: 2rem 0 0 1rem;
+
+    @include tablet {
+      font-size: 2.25rem;
+      padding: 2rem 0 2rem 1.5rem;
+    }
   }
 
   &__images {
     @include flex-center;
     flex-wrap: wrap;
     margin: 1rem;
+
+    @include tablet {
+      margin: 0;
+      padding-bottom: 1.75rem;
+    }
   }
   
   &__item {
@@ -131,7 +204,9 @@
     }
 
     @include tablet {
-      max-width: 60%;
+      max-width: 14rem;
+      max-height: 7.875rem;
+      margin: .75rem;
     }
 
   }
@@ -144,30 +219,31 @@
   color: $color-white;
   padding-left: .5rem;
 
-  &__title {
-    font-family: 'AvenirNext LT Pro Bold';
-
-  }
-
   &__links {
     display: flex;
-    justify-content: space-between;
+    align-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    height: 5rem;
   }
 
-  &__social {
-    margin: 0 5rem 0 .5rem;
-    padding: 1rem;
-    display: flex;
+  &__title {
+    font-family: 'AvenirNext LT Pro Bold';
   }
 
   &__logo {
     visibility: hidden;
+    justify-self: flex-end;
+
+    @include tablet {
+      visibility: visible;
+    }
   }
 
 
   &__info-boxes {
     display: flex;
+    flex-direction: row;
   }
 
   &__info-title {

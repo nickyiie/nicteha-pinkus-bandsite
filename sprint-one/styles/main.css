@@ -54,9 +54,20 @@ body {
   height: 5rem;
   width: 100vw;
 }
+@media (min-width: 768px) {
+  .main-navigation {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .main-navigation__title {
   margin: 0;
   padding-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .main-navigation__title {
+    margin: 0 3rem;
+  }
 }
 .main-navigation__list {
   list-style: none;
@@ -69,10 +80,16 @@ body {
   color: #FFFFFF;
   padding: 0.5rem 2.75rem;
 }
+@media (min-width: 768px) {
+  .main-navigation__link {
+    margin-right: 3rem;
+    padding: 1.75rem 0.5rem;
+  }
+}
 
 .bio {
   font-family: "AvenirNext LT Pro Demi";
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
 
 .shows {
@@ -87,6 +104,11 @@ body {
   background-position: cover;
   position: relative;
 }
+@media (min-width: 768px) {
+  .hero {
+    height: 25rem;
+  }
+}
 .hero__text {
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -96,6 +118,14 @@ body {
   top: 2rem;
   line-height: 2rem;
 }
+@media (min-width: 768px) {
+  .hero__text {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin: 1.5rem;
+    top: 25%;
+  }
+}
 
 .about {
   display: flex;
@@ -103,9 +133,19 @@ body {
   justify-content: flex-start;
   margin: 1rem;
 }
+@media (min-width: 768px) {
+  .about {
+    margin: 1.5rem;
+  }
+}
 .about__title {
   font-family: "AvenirNext LT Pro Bold";
   margin: 1rem 0 0.75rem 0;
+}
+@media (min-width: 768px) {
+  .about__title {
+    font-size: 2.25rem;
+  }
 }
 .about__image {
   max-width: 100vw;
@@ -116,9 +156,24 @@ body {
   margin-top: 0.75rem;
   font-family: "AvenirNext LT Pro Demi";
 }
+@media (min-width: 768px) {
+  .about__quote {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .about__artist {
+    font-size: 1rem;
+  }
+}
 .about__artists-names {
   margin: 2.5rem 0 0.75rem 0;
   font-family: "AvenirNext LT Pro Demi";
+}
+@media (min-width: 768px) {
+  .about__artists-names {
+    font-size: 1.5rem;
+  }
 }
 .about__blurb {
   display: flex;
@@ -128,11 +183,33 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
+@media (min-width: 768px) {
+  .about__blurb {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 768px) {
+  .about__blurb {
+    flex-direction: row;
+  }
+}
 .about__blurb-left {
   margin-bottom: 1rem;
 }
+@media (min-width: 768px) {
+  .about__blurb-left {
+    width: 48%;
+    margin: 0 4px 0 0;
+  }
+}
 .about__blurb-right {
   margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .about__blurb-right {
+    width: 48%;
+    margin: 0;
+  }
 }
 
 .gallery {
@@ -145,12 +222,24 @@ body {
   font-family: "AvenirNext LT Pro Bold";
   padding: 2rem 0 0 1rem;
 }
+@media (min-width: 768px) {
+  .gallery__title {
+    font-size: 2.25rem;
+    padding: 2rem 0 2rem 1.5rem;
+  }
+}
 .gallery__images {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 1rem;
+}
+@media (min-width: 768px) {
+  .gallery__images {
+    margin: 0;
+    padding-bottom: 1.75rem;
+  }
 }
 .gallery__item {
   max-width: 18rem;
@@ -162,9 +251,11 @@ body {
 .gallery__item:hover {
   filter: none;
 }
-@media (min-width: 780px) {
+@media (min-width: 768px) {
   .gallery__item {
-    max-width: 60%;
+    max-width: 14rem;
+    max-height: 7.875rem;
+    margin: 0.75rem;
   }
 }
 
@@ -177,24 +268,28 @@ body {
   color: #FFFFFF;
   padding-left: 0.5rem;
 }
+.footer__links {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 5rem;
+}
 .footer__title {
   font-family: "AvenirNext LT Pro Bold";
 }
-.footer__links {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.footer__social {
-  margin: 0 5rem 0 0.5rem;
-  padding: 1rem;
-  display: flex;
-}
 .footer__logo {
   visibility: hidden;
+  justify-self: flex-end;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    visibility: visible;
+  }
 }
 .footer__info-boxes {
   display: flex;
+  flex-direction: row;
 }
 .footer__info-title {
   font-size: 0.875rem;
