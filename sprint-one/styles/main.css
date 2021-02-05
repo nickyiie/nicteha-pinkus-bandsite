@@ -58,16 +58,16 @@ body {
   .main-navigation {
     flex-direction: row;
     align-items: center;
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main-navigation {
+    padding-left: 6.25rem;
   }
 }
 .main-navigation__title {
   margin: 0;
-  padding-top: 0.5rem;
-}
-@media (min-width: 768px) {
-  .main-navigation__title {
-    margin: 0 3rem;
-  }
 }
 .main-navigation__list {
   list-style: none;
@@ -78,7 +78,8 @@ body {
 .main-navigation__link {
   text-decoration: none;
   color: #FFFFFF;
-  padding: 0.5rem 2.75rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 3rem;
 }
 @media (min-width: 768px) {
   .main-navigation__link {
@@ -86,14 +87,28 @@ body {
     padding: 1.75rem 0.5rem;
   }
 }
-
-.bio {
+.main-navigation__biography {
   font-family: "AvenirNext LT Pro Demi";
   border-bottom: 3px solid #FFFFFF;
 }
-
-.shows {
+@media (min-width: 768px) {
+  .main-navigation__biography {
+    margin-left: 0.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main-navigation__biography {
+    margin: 0 56px;
+  }
+}
+.main-navigation__shows {
   color: #E1E1E1;
+  margin-left: 1rem;
+}
+@media (min-width: 1280px) {
+  .main-navigation__shows {
+    margin: 0;
+  }
 }
 
 .hero {
@@ -109,6 +124,11 @@ body {
     height: 25rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero {
+    height: 41.875rem;
+  }
+}
 .hero__text {
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -122,8 +142,13 @@ body {
   .hero__text {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    margin: 1.5rem;
+    margin-left: 1.5rem;
     top: 25%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__text {
+    margin-left: 6.25rem;
   }
 }
 
@@ -132,10 +157,16 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   margin: 1rem;
+  position: relative;
 }
 @media (min-width: 768px) {
   .about {
     margin: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about {
+    margin: 2rem 6.25rem;
   }
 }
 .about__title {
@@ -151,15 +182,38 @@ body {
   max-width: 100vw;
   margin: 0.75rem 0 0.75rem 0;
 }
+@media (min-width: 768px) {
+  .about__image {
+    height: 22.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about__image {
+    margin: 2.25rem 0 1.5rem 6.25rem;
+    height: 28.125;
+    max-width: 56rem;
+  }
+}
 .about__quote {
   color: #323232;
   margin-top: 0.75rem;
   font-family: "AvenirNext LT Pro Demi";
+  font-size: 0.875rem;
 }
 @media (min-width: 768px) {
   .about__quote {
+    margin-top: 1.5rem;
     font-size: 1.5rem;
   }
+}
+@media (min-width: 1280px) {
+  .about__quote {
+    width: 70%;
+    margin: 1.5rem 0 0 6.25rem;
+  }
+}
+.about__artist {
+  font-size: 0.8125rem;
 }
 @media (min-width: 768px) {
   .about__artist {
@@ -169,10 +223,17 @@ body {
 .about__artists-names {
   margin: 2.5rem 0 0.75rem 0;
   font-family: "AvenirNext LT Pro Demi";
+  font-size: 0.875rem;
 }
 @media (min-width: 768px) {
   .about__artists-names {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about__artists-names {
+    width: 70%;
+    margin-left: 6.25rem;
   }
 }
 .about__blurb {
@@ -185,12 +246,14 @@ body {
 }
 @media (min-width: 768px) {
   .about__blurb {
+    flex-direction: row;
     font-size: 0.875rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .about__blurb {
-    flex-direction: row;
+    width: 82%;
+    margin-left: 6.25rem;
   }
 }
 .about__blurb-left {
@@ -199,7 +262,7 @@ body {
 @media (min-width: 768px) {
   .about__blurb-left {
     width: 48%;
-    margin: 0 4px 0 0;
+    margin: 0;
   }
 }
 .about__blurb-right {
@@ -207,7 +270,7 @@ body {
 }
 @media (min-width: 768px) {
   .about__blurb-right {
-    width: 48%;
+    width: 47%;
     margin: 0;
   }
 }
@@ -218,14 +281,25 @@ body {
   justify-content: flex-start;
   background-color: #FAFAFA;
 }
+@media (min-width: 1280px) {
+  .gallery {
+    margin: 0 6.25rem;
+  }
+}
 .gallery__title {
   font-family: "AvenirNext LT Pro Bold";
+  font-size: 1.5rem;
   padding: 2rem 0 0 1rem;
 }
 @media (min-width: 768px) {
   .gallery__title {
     font-size: 2.25rem;
     padding: 2rem 0 2rem 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__title {
+    padding: 1rem 0 3.25rem 0;
   }
 }
 .gallery__images {
@@ -258,6 +332,13 @@ body {
     margin: 0.75rem;
   }
 }
+@media (min-width: 1280px) {
+  .gallery__item {
+    max-width: 20rem;
+    max-height: 12.0625rem;
+    margin: 0.75rem;
+  }
+}
 
 .footer {
   display: flex;
@@ -266,10 +347,11 @@ body {
   flex-wrap: wrap;
   background-color: #323232;
   color: #FFFFFF;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 .footer__links {
   display: flex;
+  flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
