@@ -75,6 +75,14 @@ body {
   display: flex;
   width: 100%;
 }
+.main-navigation__item {
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .main-navigation__item {
+    width: 20%;
+  }
+}
 .main-navigation__link {
   text-decoration: none;
   color: #FFFFFF;
@@ -315,6 +323,11 @@ body {
     padding-bottom: 1.75rem;
   }
 }
+@media (min-width: 1280px) {
+  .gallery__images {
+    justify-items: space-between;
+  }
+}
 .gallery__item {
   max-width: 18rem;
   margin: 0.5rem 1rem;
@@ -334,7 +347,7 @@ body {
 }
 @media (min-width: 1280px) {
   .gallery__item {
-    max-width: 20rem;
+    max-width: 21.5rem;
     max-height: 12.0625rem;
     margin: 0.75rem;
   }
@@ -347,18 +360,31 @@ body {
   flex-wrap: wrap;
   background-color: #323232;
   color: #FFFFFF;
-  padding-left: 1rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
 }
 .footer__links {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
   width: 100%;
   height: 5rem;
 }
+@media (min-width: 768px) {
+  .footer__links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__social {
+  margin: 0.5rem;
+}
+.footer__emblem {
+  margin-right: 1.5rem;
+}
 .footer__title {
   font-family: "AvenirNext LT Pro Bold";
+}
+.footer__logo-link {
+  justify-self: flex-end;
 }
 .footer__logo {
   visibility: hidden;
@@ -369,20 +395,30 @@ body {
     visibility: visible;
   }
 }
-.footer__info-boxes {
+.footer__boxes {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__info-box {
+  margin-bottom: 1.5rem;
 }
 .footer__info-title {
   font-size: 0.875rem;
   line-height: 1.375rem;
+  margin-bottom: 0.5rem;
 }
 .footer__details {
   font-size: 0.8125rem;
   line-height: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 .footer__email {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 0.75rem;
+}
+.footer__copyright {
+  font-size: 0.8125rem;
 }/*# sourceMappingURL=main.css.map */

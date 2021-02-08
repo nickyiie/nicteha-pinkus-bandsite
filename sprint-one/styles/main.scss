@@ -34,6 +34,14 @@
     width:100%;
   }
 
+  &__item {
+    width: 50%;
+
+    @include tablet {
+      width: 20%;
+    }
+  }
+
   &__link {
     text-decoration: none;
     color: $color-white;
@@ -254,6 +262,10 @@
       margin: 0;
       padding-bottom: 1.75rem;
     }
+
+    @include desktop {
+      justify-items: space-between;
+    }
   }
   
   &__item {
@@ -273,7 +285,7 @@
     }
 
     @include desktop {
-      max-width: 20rem;
+      max-width: 21.5rem;
       max-height: 12.0625rem;
       margin: .75rem;
     }
@@ -285,19 +297,34 @@
   flex-wrap: wrap;
   background-color: $color-primary;
   color: $color-white;
-  padding-left: 1rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
 
   &__links {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
     width: 100%;
     height: 5rem;
+
+    @include tablet {
+      flex-direction:row;
+      justify-content: space-between;
+    }
+  }
+
+  &__social {
+    margin: .5rem;
+  }
+
+  &__emblem {
+    margin-right: 1.5rem;
   }
 
   &__title {
     font-family: 'AvenirNext LT Pro Bold';
+  }
+
+  &__logo-link {
+    justify-self: flex-end;
   }
 
   &__logo {
@@ -309,27 +336,37 @@
     }
   }
 
-
-  &__info-boxes {
+  &__boxes {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__info-box {
+    margin-bottom: 1.5rem;
   }
 
   &__info-title {
     font-size: .875rem;
     line-height: 1.375rem;
+    margin-bottom: .5rem;
   }
 
   &__details {
     font-size: .8125rem;
     line-height: 1.125rem;
+    margin-bottom: .5rem;
   }
 
   &__email {
     text-decoration: none;
     color: $color-white;
     font-size: .75rem;
-    
+  }
+
+  &__copyright {
+    font-size: .8125rem;
   }
 }
 
