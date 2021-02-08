@@ -35,7 +35,6 @@ html {
 * ::after {
   box-sizing: border-box;
   margin: 0;
-  border: 1px solid black;
 }
 
 body {
@@ -44,6 +43,47 @@ body {
   margin: 0;
 }
 
+@-webkit-keyframes link-hover {
+  0% {
+    color: white;
+  }
+  20% {
+    color: yellowgreen;
+  }
+  40% {
+    color: green;
+  }
+  60% {
+    color: orangered;
+  }
+  80% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes link-hover {
+  0% {
+    color: white;
+  }
+  20% {
+    color: yellowgreen;
+  }
+  40% {
+    color: green;
+  }
+  60% {
+    color: orangered;
+  }
+  80% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
 .main-navigation {
   display: flex;
   flex-direction: column;
@@ -67,7 +107,7 @@ body {
   }
 }
 .main-navigation__title {
-  margin: 0;
+  margin: 0.5rem 2rem 0 0;
 }
 .main-navigation__list {
   list-style: none;
@@ -106,12 +146,21 @@ body {
 }
 @media (min-width: 1280px) {
   .main-navigation__biography {
-    margin: 0 56px;
+    margin: 0 3.5rem;
   }
 }
 .main-navigation__shows {
   color: #E1E1E1;
   margin-left: 1rem;
+}
+.main-navigation__shows:hover {
+  font-size: 1.5rem;
+  -webkit-animation-name: link-hover;
+          animation-name: link-hover;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 @media (min-width: 1280px) {
   .main-navigation__shows {
@@ -193,6 +242,12 @@ body {
 @media (min-width: 768px) {
   .about__image {
     height: 22.6rem;
+  }
+}
+@media (min-width: 900px) {
+  .about__image {
+    margin: 0.75rem 0 0 6rem;
+    max-width: 80%;
   }
 }
 @media (min-width: 1280px) {
@@ -289,11 +344,6 @@ body {
   justify-content: flex-start;
   background-color: #FAFAFA;
 }
-@media (min-width: 1280px) {
-  .gallery {
-    margin: 0 6.25rem;
-  }
-}
 .gallery__title {
   font-family: "AvenirNext LT Pro Bold";
   font-size: 1.5rem;
@@ -308,6 +358,7 @@ body {
 @media (min-width: 1280px) {
   .gallery__title {
     padding: 1rem 0 3.25rem 0;
+    margin: 0 6.25rem;
   }
 }
 .gallery__images {
@@ -325,7 +376,7 @@ body {
 }
 @media (min-width: 1280px) {
   .gallery__images {
-    justify-items: space-between;
+    justify-items: flex-start;
   }
 }
 .gallery__item {
@@ -347,7 +398,7 @@ body {
 }
 @media (min-width: 1280px) {
   .gallery__item {
-    max-width: 21.5rem;
+    max-width: 20.79rem;
     max-height: 12.0625rem;
     margin: 0.75rem;
   }
@@ -362,26 +413,49 @@ body {
   color: #FFFFFF;
   padding: 2rem 1.5rem 2rem 1.5rem;
 }
+@media (min-width: 1280px) {
+  .footer {
+    padding: 3rem 6.25rem;
+  }
+}
 .footer__links {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 5rem;
 }
 @media (min-width: 768px) {
   .footer__links {
     flex-direction: row;
-    justify-content: space-between;
+  }
+}
+.footer__title {
+  font-family: "AvenirNext LT Pro Bold";
+}
+@media (min-width: 768px) {
+  .footer__title {
+    margin-right: 8rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__title {
+    margin-right: 4rem;
   }
 }
 .footer__social {
   margin: 0.5rem;
 }
+@media (min-width: 768px) {
+  .footer__social {
+    margin-right: 8em;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__social {
+    margin-right: 33rem;
+  }
+}
 .footer__emblem {
   margin-right: 1.5rem;
-}
-.footer__title {
-  font-family: "AvenirNext LT Pro Bold";
 }
 .footer__logo-link {
   justify-self: flex-end;
@@ -401,8 +475,18 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (min-width: 1280px) {
+  .footer__boxes {
+    justify-content: flex-start;
+  }
+}
 .footer__info-box {
   margin-bottom: 1.5rem;
+}
+@media (min-width: 1280px) {
+  .footer__info-box {
+    margin-right: 6rem;
+  }
 }
 .footer__info-title {
   font-size: 0.875rem;
@@ -421,4 +505,9 @@ body {
 }
 .footer__copyright {
   font-size: 0.8125rem;
+}
+
+.logo {
+  width: 7.5rem;
+  height: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

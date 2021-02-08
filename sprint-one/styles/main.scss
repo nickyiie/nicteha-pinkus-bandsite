@@ -2,6 +2,7 @@
 @use './partials/partial' as *;
 @use './partials/resets' as *;
 @use './partials/typography' as *;
+@use './partials/animations' as *;
 
 .main-navigation {
   display: flex;
@@ -24,7 +25,7 @@
   }
 
   &__title {
-    margin: 0;
+    margin: .5rem 2rem 0 0;
   }
 
   &__list {
@@ -62,12 +63,19 @@
     }
 
     @include desktop {
-      margin: 0 56px;
+      margin: 0 3.5rem;
     }
   }
   &__shows {
-    color: $color-border;
+    color: $color-light-font;
     margin-left: 1rem;
+
+    &:hover {
+      font-size: 1.5rem;
+      animation-name: link-hover;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
 
     @include desktop {
       margin: 0;
@@ -141,6 +149,11 @@
 
     @include tablet {
       height: 22.6rem;
+    }
+
+    @include between {
+      margin: .75rem 0 0 6rem;
+      max-width: 80%;
     }
 
     @include desktop {
@@ -234,10 +247,6 @@
   @include flex-column;
   background-color: $color-bckgrnd-text;
 
-  @include desktop {
-    margin: 0 6.25rem;
-  }
-
   &__title {
     font-family: 'AvenirNext LT Pro Bold';
     font-size: 1.5rem;
@@ -250,6 +259,7 @@
 
     @include desktop {
       padding: 1rem 0 3.25rem 0;
+      margin: 0 6.25rem;
     }
   }
 
@@ -264,7 +274,8 @@
     }
 
     @include desktop {
-      justify-items: space-between;
+      justify-items: flex-start;
+    
     }
   }
   
@@ -285,7 +296,7 @@
     }
 
     @include desktop {
-      max-width: 21.5rem;
+      max-width: 20.79rem;
       max-height: 12.0625rem;
       margin: .75rem;
     }
@@ -299,28 +310,46 @@
   color: $color-white;
   padding: 2rem 1.5rem 2rem 1.5rem;
 
+  @include desktop {
+    padding: 3rem 6.25rem;
+  }
+
   &__links {
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: 5rem;
 
     @include tablet {
       flex-direction:row;
-      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-family: 'AvenirNext LT Pro Bold';
+
+    @include tablet {
+      margin-right: 8rem;
+    }
+
+    @include desktop {
+      margin-right: 4rem;
     }
   }
 
   &__social {
     margin: .5rem;
+
+    @include tablet {
+      margin-right:8em;
+    }
+
+    @include desktop {
+      margin-right: 33rem;
+    }
   }
 
   &__emblem {
     margin-right: 1.5rem;
-  }
-
-  &__title {
-    font-family: 'AvenirNext LT Pro Bold';
   }
 
   &__logo-link {
@@ -341,10 +370,18 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include desktop {
+      justify-content: flex-start;
+    }
   }
 
   &__info-box {
     margin-bottom: 1.5rem;
+    
+    @include desktop {
+      margin-right: 6rem;
+    }
   }
 
   &__info-title {
@@ -370,5 +407,9 @@
   }
 }
 
+.logo {
+  width: 7.5rem;
+  height: 1.5rem
+}
 
 
