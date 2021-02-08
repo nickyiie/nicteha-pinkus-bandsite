@@ -1,13 +1,19 @@
 @use './partial' as *;
 
+@mixin between-mobile-tablet {
+  @media (min-width: $breakpointbetween-mobile-tablet) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: $breakpointtablet) {
     @content;
   }
 }
 
-@mixin between {
-  @media (min-width: $breakpointbetween) {
+@mixin between-tablet-desktop {
+  @media (min-width: $breakpointbetween-tablet-desktop) {
     @content;
   }
 }

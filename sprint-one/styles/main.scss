@@ -14,6 +14,10 @@
   height: 5rem;
   width: 100vw;
 
+  @include between-mobile-tablet {
+    flex-direction: row;
+  }
+
   @include tablet {
     flex-direction: row;
     align-items: center;
@@ -26,6 +30,10 @@
 
   &__title {
     margin: .5rem 2rem 0 0;
+
+    @include between-mobile-tablet {
+      padding-left: 1rem;
+    }
   }
 
   &__list {
@@ -38,6 +46,10 @@
   &__item {
     width: 50%;
 
+    @include between-mobile-tablet {
+      width: 30%
+    }
+
     @include tablet {
       width: 20%;
     }
@@ -49,7 +61,7 @@
     font-size: .875rem;
     padding: .5rem 3rem;
 
-    @include tablet {
+    @include between-mobile-tablet {
       margin-right: 3rem; 
       padding: 1.75rem .5rem;
     }
@@ -57,6 +69,14 @@
   &__biography {
     font-family: 'AvenirNext LT Pro Demi';
     border-bottom: 3px solid $color-white;
+
+    &:hover {
+      font-size: 1.5rem;
+      border: none;
+      animation-name: link-hover;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
 
     @include tablet {
       margin-left: .5rem;
@@ -151,7 +171,7 @@
       height: 22.6rem;
     }
 
-    @include between {
+    @include between-tablet-desktop {
       margin: .75rem 0 0 6rem;
       max-width: 80%;
     }
