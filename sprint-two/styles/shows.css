@@ -6,13 +6,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "AvenirNext LT Pro Demi";
   src: url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: bold;
@@ -35,6 +28,7 @@ html {
 * ::after {
   box-sizing: border-box;
   margin: 0;
+  border: 1px solid black;
 }
 
 body {
@@ -93,6 +87,7 @@ body {
   background-color: #323232;
   height: 5rem;
   width: 100vw;
+  position: relative;
 }
 @media (min-width: 460px) {
   .main-navigation {
@@ -112,7 +107,9 @@ body {
   }
 }
 .main-navigation__title {
-  margin: 0.5rem 2rem 0 0;
+  margin: 0.5rem 1rem 0 0;
+  position: absolute;
+  top: 5px;
 }
 @media (min-width: 460px) {
   .main-navigation__title {
@@ -142,21 +139,22 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 0.875rem;
-  padding: 0.5rem 3rem;
+  padding: 0 4rem 0.5rem 3.5rem;
+  position: absolute;
+  bottom: 2px;
 }
 @media (min-width: 460px) {
   .main-navigation__link {
     margin-right: 3rem;
-    padding: 1.75rem 0.5rem;
+    padding: 1.5rem 0.5rem;
+    bottom: 0;
   }
 }
 .main-navigation__biography {
-  font-family: "AvenirNext LT Pro Demi";
-  border-bottom: 3px solid #FFFFFF;
+  color: #E1E1E1;
 }
 .main-navigation__biography:hover {
   font-size: 1.5rem;
-  border: none;
   -webkit-animation-name: link-hover;
           animation-name: link-hover;
   -webkit-animation-duration: 1.5s;
@@ -175,11 +173,12 @@ body {
   }
 }
 .main-navigation__shows {
-  color: #E1E1E1;
-  margin-left: 1rem;
+  font-family: "AvenirNext LT Pro Demi";
+  border-bottom: 3px solid #FFFFFF;
 }
 .main-navigation__shows:hover {
   font-size: 1.5rem;
+  border: none;
   -webkit-animation-name: link-hover;
           animation-name: link-hover;
   -webkit-animation-duration: 1.5s;
@@ -195,11 +194,12 @@ body {
 
 .hero {
   width: 100%;
-  height: 11.4375rem;
+  height: 29.5rem;
   background-image: url(../assets/images/djboard.jpeg);
   background-size: cover;
   background-position: cover;
   position: relative;
+  padding: 0 1rem;
 }
 @media (min-width: 768px) {
   .hero {
@@ -217,6 +217,13 @@ body {
   font-family: "AvenirNext LT Pro Bold";
   position: absolute;
   line-height: 2rem;
+  top: 4rem;
+  left: 1rem;
+  padding-right: 1rem;
+}
+.hero__text--album {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 @media (min-width: 768px) {
   .hero__text {
@@ -230,6 +237,54 @@ body {
   .hero__text {
     margin-left: 6.25rem;
   }
+}
+.hero__song {
+  width: 90%;
+  height: 110px;
+  position: absolute;
+  top: 68%;
+}
+
+.shows {
+  margin: 2rem 1rem;
+  /*&__table {
+    border: none;
+    text-align: left;
+  }
+  */
+}
+.shows__title {
+  font-family: "AvenirNext LT Pro Bold";
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.shows__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.shows__label {
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  margin: 1rem 0;
+}
+.shows__date {
+  font-family: "AvenirNext LT Pro Demi";
+  font-size: 0.8125rem;
+}
+.shows__details {
+  font-size: 0.8125rem;
+}
+.shows__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "AvenirNext LT Pro Demi";
+  color: #FFFFFF;
+  background-color: #323232;
+  height: 3rem;
+  border-radius: 5px;
+  margin-top: 2rem;
 }
 
 .footer {
