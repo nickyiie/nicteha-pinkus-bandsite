@@ -171,16 +171,14 @@
     margin-bottom: 2.5rem;
   }
 
-  /*&__table {
-    border: none;
-    text-align: left;
-  }
-  */
-
   &__box {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    @media tablet {
+      flex-direction: row;
+    }
   }
 
   &__label {
@@ -200,12 +198,12 @@
 
   &__button {
     @include flex-center;
-    font-family: 'AvenirNext LT Pro Demi';
-    color: $color-white;
-    background-color: $color-primary;
-    height: 3rem;
-    border-radius: 5px;
-    margin-top: 2rem;
+    @include button;
+  }
+
+  &__divider {
+    margin-top: 1rem;
+    border: 1px solid $color-light-font;
   }
 }
 

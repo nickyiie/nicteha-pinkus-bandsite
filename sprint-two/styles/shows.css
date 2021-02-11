@@ -247,11 +247,6 @@ body {
 
 .shows {
   margin: 2rem 1rem;
-  /*&__table {
-    border: none;
-    text-align: left;
-  }
-  */
 }
 .shows__title {
   font-family: "AvenirNext LT Pro Bold";
@@ -262,6 +257,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+@media tablet {
+  .shows__box {
+    flex-direction: row;
+  }
 }
 .shows__label {
   color: #AFAFAF;
@@ -283,8 +283,12 @@ body {
   color: #FFFFFF;
   background-color: #323232;
   height: 3rem;
-  border-radius: 5px;
+  border-radius: 4px;
   margin-top: 2rem;
+}
+.shows__divider {
+  margin-top: 1rem;
+  border: 1px solid #E1E1E1;
 }
 
 .footer {

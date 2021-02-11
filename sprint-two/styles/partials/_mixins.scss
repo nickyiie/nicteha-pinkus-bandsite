@@ -36,3 +36,12 @@
   justify-content: flex-start;
 }
 
+@mixin button {
+  font-family: 'AvenirNext LT Pro Demi';
+  color: $color-white;
+  background-color: $color-primary;
+  height: 3rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+

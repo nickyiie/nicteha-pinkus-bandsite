@@ -323,6 +323,19 @@
   }
 }
 
+.comments {
+
+   &__title {
+    font-family: 'AvenirNext LT Pro Bold';
+   }
+
+   &__form {
+     @include flex-column;
+   }
+
+   &__label {}
+}
+
 .footer {
   @include flex-column;
   flex-wrap: wrap;
