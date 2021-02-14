@@ -1,5 +1,5 @@
 @use './partials/mixins' as *;
-@use './partials/partial' as *;
+@use './partials/variables' as *;
 @use './partials/resets' as *;
 @use './partials/typography' as *;
 @use './partials/animations' as *;
@@ -324,17 +324,89 @@
 }
 
 .comments {
+  @include flex-column;
+  padding: 1rem;
 
-   &__title {
+  &__title {
     font-family: 'AvenirNext LT Pro Bold';
-   }
+    margin: 2rem 0 3rem 0;
+  }
 
-   &__form {
-     @include flex-column;
-   }
+  &__interactive {
+    @include flex-center;
 
-   &__label {}
+    @include tablet {
+      padding: 0 6.25rem 0 6.25rem;
+    }
+  }
+
+  &__image {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5rem;
+    object-fit: cover;
+    object-position: left;
+    align-self: flex-start;
+    margin: 1rem;
+  }
+
+  &__label {
+    font-family: 'AvenirNext LT Pro Demi';
+    color: $color-labels;
+  }
+
+  &__input {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+
+    &:focus {
+      border: 1px solid black;
+    }
+  }
+
+  &__textbox {
+    width: 100%;
+    height: 6rem;
+    border-radius: 4px;
+
+    &:focus {
+      border: 1px solid black;
+    }
+  }
+
+  &__button {
+    @include button;
+    width: 100%;
+    margin: .75rem 0 0 0;
+  }
+
+  &__submitted {
+    @include flex-center;
+  }
+
+  &__heading {
+    display: flex;
+   
+  }
+
+  &__username {
+    margin-bottom: 1rem;
+    width: 60%;
+    margin-right: 2rem;
+  }
+
+  &__date {
+    width: 20%;
+  }
+
+  &__divider {
+    margin: 2rem 0 1rem 0;
+    border: 1px solid $color-light-font;
+  }
 }
+
 
 .footer {
   @include flex-column;

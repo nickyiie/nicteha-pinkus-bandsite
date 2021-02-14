@@ -213,10 +213,10 @@ body {
 }
 .hero__text {
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "AvenirNext LT Pro Bold";
   position: absolute;
-  line-height: 2rem;
+  line-height: 2.75rem;
   top: 4rem;
   left: 1rem;
   padding-right: 1rem;

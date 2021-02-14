@@ -4,44 +4,52 @@ let upcomingShows = [
     date: 'Mon Dec 17 2018', 
     labelVenue: 'VENUE',
     venue: 'Ronald Lane',
-    labelLocation: 'San Francisco, CA'
+    labelLocation: 'LOCATION',       
+    location: 'San Francisco, CA'
   },
   {
     labelDate: 'DATE',
     date: 'Tue Jul 18 2019', 
     labelVenue: 'VENUE',
-    vanue: 'Pier 3 East',
-    labelLocation: 'San Francisco, CA'
+    venue: 'Pier 3 East',
+    labelLocation: 'LOCATION',       
+    location: 'San Francisco, CA'
   },
   {
     labelDate: 'DATE',
     date: 'Fri Jul 22 2019', 
     labelVenue: 'VENUE',
-    vanue: 'View Loungue',
-    labelLocation: 'San Francisco, CA'
+    venue: 'View Loungue',
+    labelLocation: 'LOCATION',       
+    location: 'San Francisco, CA'
   },
   {
     labelDate: 'DATE',
     date: 'Sat Aug 12 2019', 
     labelVenue: 'VENUE',
-    vanue: 'Hyatt Agency',
-    labelLocation: 'San Francisco, CA'
+    venue: 'Hyatt Agency',
+    labelLocation: 'LOCATION',       
+    location: 'San Francisco, CA'
   },
   {
     labelDate: 'DATE',
     date: 'Fri Sep 05 2019', 
     labelVenue: 'VENUE',
-    vanue: 'Moscow Center',
-    labelLocation: 'San Francisco, CA'
+    venue: 'Moscow Center',
+    labelLocation: 'LOCATION',       
+    location: 'San Francisco, CA'
   },
   {
     labelDate: 'DATE',
     date: 'Wed Aug 11 2019', 
     labelVenue: 'VENUE',
-    vanue: 'Pres Club',
-    labelLocation: 'San Francisco, CA'
+    venue: 'Pres Club',
+    labelLocation: 'LOCATION',       
+    location: 'San Francisco, CA'
   },
 ];
+
+
 
 let hero = document.querySelector('.hero');
 let shows = document.createElement('section');
@@ -57,7 +65,6 @@ shows.appendChild(showsTitle);
 for (let i = 0; i < upcomingShows.length; i++) {
   const boxes = createBox(upcomingShows[i]);
   shows.appendChild(boxes);
-}
 
 function createBox (futureShows) {
   let box = document.createElement('div');
@@ -65,32 +72,32 @@ function createBox (futureShows) {
   
   let labelOne = document.createElement('h3');
   labelOne.classList.add('shows__label');
-  labelOne.innerText = upcomingShows.labelDate;
+  labelOne.innerText = upcomingShows[i].labelDate;
   box.appendChild(labelOne);
 
   let date = document.createElement('p');
   date.classList.add('shows__date');
-  date.innerText = upcomingShows.date;
+  date.innerText = upcomingShows[i].date;
   box.appendChild(date);
 
   let labelTwo = document.createElement('h3');
   labelTwo.classList.add('shows__label');
-  labelTwo.innerText = upcomingShows.labelVenue;
+  labelTwo.innerText = upcomingShows[i].labelVenue;
   box.appendChild(labelTwo);
 
   let venue = document.createElement('p');
   venue.classList.add('shows__details');
-  venue.innerText = upcomingShows.venue;
+  venue.innerText = upcomingShows[i].venue;
   box.appendChild(venue);
 
   let labelThree = document.createElement('h3');
   labelThree.classList.add('shows__label');
-  labelThree.innerText = upcomingShows.venue;
+  labelThree.innerText = upcomingShows[i].labelLocation;
   box.appendChild(labelThree);
 
   let city = document.createElement('p');
   city.classList.add('shows__details');
-  city.innerText = upcomingShows.labelLocation;
+  city.innerText = upcomingShows[i].location;
   box.appendChild(city);
 
   let button = document.createElement('p');
@@ -104,6 +111,7 @@ function createBox (futureShows) {
 
   return box;
 }
+};
 
 
 

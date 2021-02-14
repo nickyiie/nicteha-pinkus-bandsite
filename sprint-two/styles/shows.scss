@@ -1,5 +1,5 @@
 @use './partials/typography' as *;
-@use './partials/partial' as *;
+@use './partials/variables' as *;
 @use './partials/resets' as *;
 @use './partials/mixins' as *;
 @use './partials/animations' as *;
@@ -129,10 +129,10 @@
 
   &__text {
     color: $color-white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'AvenirNext LT Pro Bold';
     position: absolute;
-    line-height: 2rem;
+    line-height: 2.75rem;
     top: 4rem;
     left: 1rem;
     padding-right: 1rem;
@@ -182,7 +182,7 @@
   }
 
   &__label {
-    color: #AFAFAF;
+    color: $color-labels;
     font-size: .875rem;
     margin: 1rem 0;
   }
