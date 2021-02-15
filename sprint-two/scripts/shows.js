@@ -62,9 +62,13 @@ showsTitle.classList.add('shows__title');
 showsTitle.innerText = 'Shows';
 shows.appendChild(showsTitle);
 
+let showsList = document.createElement('div');
+showsList.classList.add('shows__container');
+shows.appendChild(showsList)
+
 let labelSeries = document.createElement('div');
 labelSeries.classList.add('shows__top-label');
-shows.appendChild(labelSeries);
+showsList.appendChild(labelSeries);
 
 let dateLabel = document.createElement('p');
 let venueLabel = document.createElement('p');
@@ -85,7 +89,7 @@ labelSeries.appendChild(locationLabel);
 
 for (let i = 0; i < upcomingShows.length; i++) {
   const boxes = createBox(upcomingShows[i]);
-  shows.appendChild(boxes);
+  showsList.appendChild(boxes);
 
 function createBox (futureShows) {
   let box = document.createElement('div');

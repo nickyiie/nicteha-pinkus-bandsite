@@ -1,4 +1,4 @@
-const userComments = [ 
+let userComments = [ 
   { username: 'Micheal Lyons',
     date: '12/18/2018',
     comment: 'They BLEW the ROOF off at their last show once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.'
@@ -46,7 +46,7 @@ form.appendChild(nameLabel);
 
 let nameInput = document.createElement('input');
 nameInput.classList.add('comments__input');
-setAttributes (nameInput, {'type': 'text', 'name': 'name', 'placeholder': 'Mohan Muruge'});
+setAttributes (nameInput, {'type': 'text', 'name': 'name', 'placeholder': 'Your name...'});
 form.appendChild(nameInput);
 
 let commentsLabel = document.createElement('label');
@@ -69,61 +69,6 @@ form.appendChild(button);
 let cDate= new Date();
 
 let commentDate = cDate.getMonth() + "/" + cDate.getDate() + "/" + cDate.getFullYear();
-
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  
-  let newComment = {
-    username: event.target.name.value,
-    date: commentDate,
-    comment: event.target.comment.value
-  }
-
-    function displayComment(comment) {
-
-    let newCommentBox = document.createElement('div');
-    newCommentBox.classList.add('comments__display');
-    newComments.appendChild(commentBox);
-
-    let image = document.createElement('img');
-    image.classList.add('comments__image');
-    image.setAttribute('src', './assets/images/Mohan-muruge.jpg');
-    commentBox.appendChild(image);
-  
-    let userInfo = document.createElement('div');
-    userInfo.classList.add('comments__old');
-    commentBox.appendChild(userInfo);
-  
-    let headingBox = document.createElement('div');
-    headingBox.classList.add('comments__heading');
-    userInfo.appendChild(headingBox);
-  
-    let userName = document.createElement('h3');
-    userName.classList.add('comments__username');
-    userName.innerText = newComment.username;
-    headingBox.appendChild(userName);
-  
-    let commentDate = document.createElement('p');
-    commentDate.classList.add('comments__date');
-    commentDate.innerText = newComment.date;
-    headingBox.appendChild(commentDate);
-  
-    let newestcomment = document.createElement('p');
-    newestcomment.classList.add('comments__comment');
-    newestcomment.innerText = newComment.comment;
-    userInfo.appendChild(newestcomment);
-
-    return newCommentBox
-  };
-  
-  displayComment(comment);
-  console.log(userComments.length);
-  userComments.unshift(newComment);
-  console.log(newComment);
-
-}
-);
 
 
 userComments.forEach(function (commentsDisplayBox) {
@@ -163,6 +108,58 @@ userComments.forEach(function (commentsDisplayBox) {
   return commentBox;
 } 
 ); 
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  
+  let newComment = {
+    username: event.target.name.value,
+    date: commentDate,
+    comment: event.target.comment.value
+  }
+      function displayComment(usertComments) {
+
+        let newestCommentBox = document.createElement('div');
+        newestCommentBox.classList.add('comments__display');
+        comments.appendChild(newestCommentBox);
+    
+    
+        let image = document.createElement('img');
+        image.classList.add('comments__image');
+        image.setAttribute('src', './assets/images/Mohan-muruge.jpg');
+        newestCommentBox.appendChild(image);
+    
+        let userInfo = document.createElement('div');
+        userInfo.classList.add('comments__old');
+        newestCommentBox.appendChild(userInfo);
+    
+        let headingBox = document.createElement('div');
+        headingBox.classList.add('comments__heading');
+        userInfo.appendChild(headingBox);
+    
+        let userName = document.createElement('h3');
+        userName.classList.add('comments__username');
+        userName.innerText = newComment.username;
+        headingBox.appendChild(userName);
+    
+        let commentDate = document.createElement('p');
+        commentDate.classList.add('comments__date');
+        commentDate.innerText = newComment.date;
+        headingBox.appendChild(commentDate);
+    
+        let newestcomment = document.createElement('p');
+        newestcomment.classList.add('comments__comment');
+        newestcomment.innerText = newComment.comment;
+        userInfo.appendChild(newestcomment);
+
+    
+        return newestCommentBox
+      };
+      
+      userComments.unshift(newComment);
+      displayComment();
+    }
+    );
 
 
 function setAttributes(el, attribute) {
