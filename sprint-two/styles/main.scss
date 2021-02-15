@@ -325,18 +325,50 @@
 
 .comments {
   @include flex-column;
-  padding: 1rem;
-
+  padding: 1rem 1rem 2.5rem 1rem;
+  
   &__title {
     font-family: 'AvenirNext LT Pro Bold';
     margin: 2rem 0 3rem 0;
+
+    @include tablet {
+      font-size: 2.25rem;
+    }
+
+    @include desktop {
+      margin: 2rem 6.25rem 2.5rem 6.25rem;
+    }
   }
 
   &__interactive {
     @include flex-center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-light-font;
+
+    @include between-mobile-tablet {
+      padding: 0 0 2rem 3rem;
+    }
+    @include tablet {
+      margin: 0 6.25rem 2rem 6.25rem;
+    }
+
+    @include desktop {
+      margin: 0 17.875rem 0 17.875rem;
+      padding: 0 0 2rem 0;
+      justify-content: flex-end;
+    }
+  }
+
+  &__form {
+    @include flex-column;
+    width: 80%;
 
     @include tablet {
-      padding: 0 6.25rem 0 6.25rem;
+      width: 100%;
+    }
+
+    @include desktop {
+      width: 69%;
     }
   }
 
@@ -347,7 +379,11 @@
     object-fit: cover;
     object-position: left;
     align-self: flex-start;
-    margin: 1rem;
+    margin-right: .5rem;
+
+    @include tablet {
+      margin-right: 1rem;
+    }
   }
 
   &__label {
@@ -380,31 +416,69 @@
     @include button;
     width: 100%;
     margin: .75rem 0 0 0;
+
+    &:hover {
+      background-color: black;
+    }
+
+    @include between-mobile-tablet {
+      align-self: flex-end;
+      width: 43%;
+    }
+
+    @include tablet { 
+      width: 40%;
+      margin-top: 1.5rem;
+    }
+
+    @include between-tablet-desktop {
+      width: 30%;
+    }
+
+    @include desktop {
+      width: 38%;
+    }
   }
 
-  &__submitted {
-    @include flex-center;
+  &__display {
+    display: flex;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $color-light-font;
+
+    @include tablet {
+      margin: 0 6.25rem;
+      justify-content: flex-end;
+    }
+
+    @include desktop {
+      margin: 0 17.875rem;
+    }
+  }
+
+  &__old {
+    @include tablet {
+      width: 80%;
+    }
   }
 
   &__heading {
     display: flex;
-   
+    justify-content: space-between;
+    font-size: .875rem;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
 
   &__username {
     margin-bottom: 1rem;
-    width: 60%;
-    margin-right: 2rem;
+
+    @include tablet {
+      margin-right: .5rem;
+    }
   }
 
-  &__date {
-    width: 20%;
-  }
-
-  &__divider {
-    margin: 2rem 0 1rem 0;
-    border: 1px solid $color-light-font;
-  }
 }
 
 

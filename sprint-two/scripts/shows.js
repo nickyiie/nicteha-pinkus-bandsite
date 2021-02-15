@@ -1,4 +1,4 @@
-let upcomingShows = [
+const upcomingShows = [
    {
     labelDate: 'DATE',
     date: 'Mon Dec 17 2018', 
@@ -57,10 +57,31 @@ shows.classList.add('shows');
 
 hero.insertAdjacentElement('afterend', shows);
 
-const showsTitle = document.createElement('h2');
+let showsTitle = document.createElement('h2');
 showsTitle.classList.add('shows__title');
 showsTitle.innerText = 'Shows';
 shows.appendChild(showsTitle);
+
+let labelSeries = document.createElement('div');
+labelSeries.classList.add('shows__top-label');
+shows.appendChild(labelSeries);
+
+let dateLabel = document.createElement('p');
+let venueLabel = document.createElement('p');
+let locationLabel = document.createElement('p');
+
+dateLabel.classList.add('shows__top-label');
+venueLabel.classList.add('shows__top-label');
+locationLabel.classList.add('shows__top-label');
+
+dateLabel.innerText = 'DATES';
+venueLabel.innerText = 'VENUE';
+locationLabel.innerText = 'LOCATION';
+
+labelSeries.appendChild(dateLabel);
+labelSeries.appendChild(venueLabel);
+labelSeries.appendChild(locationLabel);
+
 
 for (let i = 0; i < upcomingShows.length; i++) {
   const boxes = createBox(upcomingShows[i]);
@@ -105,13 +126,10 @@ function createBox (futureShows) {
   button.innerText = 'BUY TICKETS';
   box.appendChild(button);
 
-  let divider = document.createElement('hr')
-  divider.classList.add('shows__divider');
-  box.appendChild(divider);
-
   return box;
 }
 };
+
 
 
 

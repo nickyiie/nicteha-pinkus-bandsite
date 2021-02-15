@@ -1,4 +1,4 @@
-let userComments = [ 
+const userComments = [ 
   { username: 'Micheal Lyons',
     date: '12/18/2018',
     comment: 'They BLEW the ROOF off at their last show once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.'
@@ -46,7 +46,7 @@ form.appendChild(nameLabel);
 
 let nameInput = document.createElement('input');
 nameInput.classList.add('comments__input');
-setAttributes (nameInput, {'type': 'text', 'name': 'name', 'placeholder': 'Your name...'});
+setAttributes (nameInput, {'type': 'text', 'name': 'name', 'placeholder': 'Mohan Muruge'});
 form.appendChild(nameInput);
 
 let commentsLabel = document.createElement('label');
@@ -70,9 +70,6 @@ let cDate= new Date();
 
 let commentDate = cDate.getMonth() + "/" + cDate.getDate() + "/" + cDate.getFullYear();
 
-let dividerOne = document.createElement('hr');
-dividerOne.classList.add('comments__divider');
-comments.appendChild(dividerOne);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -88,11 +85,7 @@ form.addEventListener("submit", (event) => {
     let newCommentBox = document.createElement('div');
     newCommentBox.classList.add('comments__display');
     newComments.appendChild(commentBox);
-  
-    let commentHolder = document.createElement('div');
-    commentHolder.classList.add('comments__submitted');
-    commentBox.appendChild(commentHolder);
-  
+
     let image = document.createElement('img');
     image.classList.add('comments__image');
     image.setAttribute('src', './assets/images/Mohan-muruge.jpg');
@@ -120,10 +113,6 @@ form.addEventListener("submit", (event) => {
     newestcomment.classList.add('comments__comment');
     newestcomment.innerText = newComment.comment;
     userInfo.appendChild(newestcomment);
-  
-    let divider = document.createElement('hr');
-    divider.classList.add('comments__divider');
-    commentBox.appendChild(divider);
 
     return newCommentBox
   };
@@ -137,17 +126,11 @@ form.addEventListener("submit", (event) => {
 );
 
 
-
-
 userComments.forEach(function (commentsDisplayBox) {
 
   let commentBox = document.createElement('div');
   commentBox.classList.add('comments__display');
   comments.appendChild(commentBox);
-
-  let commentHolder = document.createElement('div');
-  commentHolder.classList.add('comments__submitted');
-  commentBox.appendChild(commentHolder);
 
   let image = document.createElement('img');
   image.classList.add('comments__image');
@@ -176,10 +159,6 @@ userComments.forEach(function (commentsDisplayBox) {
   comment.classList.add('comments__comment');
   comment.innerText = commentsDisplayBox.comment;
   userInfo.appendChild(comment);
-
-  let divider = document.createElement('hr');
-  divider.classList.add('comments__divider');
-  commentBox.appendChild(divider);
 
   return commentBox;
 } 
