@@ -121,7 +121,7 @@ form.addEventListener("submit", (event) => {
 
         let newestCommentBox = document.createElement('div');
         newestCommentBox.classList.add('comments__display');
-        comments.appendChild(newestCommentBox);
+        interactiveForm.insertAdjacentElement('afterend', newestCommentBox);
     
     
         let image = document.createElement('img');
@@ -158,6 +158,7 @@ form.addEventListener("submit", (event) => {
       
       userComments.unshift(newComment);
       displayComment();
+      form.reset();
     }
     );
 
