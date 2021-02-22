@@ -1,50 +1,32 @@
 const upcomingShows = [
    {
-    labelDate: 'DATE',
     date: 'Mon Dec 17 2018', 
-    labelVenue: 'VENUE',
-    venue: 'Ronald Lane',
-    labelLocation: 'LOCATION',       
+    venue: 'Ronald Lane',      
     location: 'San Francisco, CA'
   },
   {
-    labelDate: 'DATE',
     date: 'Tue Jul 18 2019', 
-    labelVenue: 'VENUE',
-    venue: 'Pier 3 East',
-    labelLocation: 'LOCATION',       
+    venue: 'Pier 3 East',      
     location: 'San Francisco, CA'
   },
   {
-    labelDate: 'DATE',
     date: 'Fri Jul 22 2019', 
-    labelVenue: 'VENUE',
-    venue: 'View Loungue',
-    labelLocation: 'LOCATION',       
+    venue: 'View Loungue',      
     location: 'San Francisco, CA'
   },
   {
-    labelDate: 'DATE',
     date: 'Sat Aug 12 2019', 
-    labelVenue: 'VENUE',
-    venue: 'Hyatt Agency',
-    labelLocation: 'LOCATION',       
+    venue: 'Hyatt Agency',      
     location: 'San Francisco, CA'
   },
   {
-    labelDate: 'DATE',
     date: 'Fri Sep 05 2019', 
-    labelVenue: 'VENUE',
-    venue: 'Moscow Center',
-    labelLocation: 'LOCATION',       
+    venue: 'Moscow Center',      
     location: 'San Francisco, CA'
   },
   {
-    labelDate: 'DATE',
     date: 'Wed Aug 11 2019', 
-    labelVenue: 'VENUE',
-    venue: 'Pres Club',
-    labelLocation: 'LOCATION',       
+    venue: 'Pres Club',      
     location: 'San Francisco, CA'
   },
 ];
@@ -97,7 +79,7 @@ function createBox (futureShows) {
   
   let labelOne = document.createElement('h3');
   labelOne.classList.add('shows__label');
-  labelOne.innerText = upcomingShows[i].labelDate;
+  labelOne.innerText = 'DATE';
   box.appendChild(labelOne);
 
   let date = document.createElement('p');
@@ -107,7 +89,7 @@ function createBox (futureShows) {
 
   let labelTwo = document.createElement('h3');
   labelTwo.classList.add('shows__label');
-  labelTwo.innerText = upcomingShows[i].labelVenue;
+  labelTwo.innerText = 'VENUE';
   box.appendChild(labelTwo);
 
   let venue = document.createElement('p');
@@ -117,7 +99,7 @@ function createBox (futureShows) {
 
   let labelThree = document.createElement('h3');
   labelThree.classList.add('shows__label');
-  labelThree.innerText = upcomingShows[i].labelLocation;
+  labelThree.innerText = 'LOCATION';
   box.appendChild(labelThree);
 
   let city = document.createElement('p');

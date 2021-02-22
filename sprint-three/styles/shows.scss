@@ -3,69 +3,9 @@
 @use './partials/resets' as *;
 @use './partials/mixins' as *;
 @use './partials/animations' as *;
+@use './partials/headerAndFooter'  as *;
 
 .main-navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: $color-white;
-  background-color: $color-primary;
-  height: 5rem;
-  width: 100vw;
-
-  @include between-mobile-tablet {
-    flex-direction: row;
-  }
-
-  @include tablet {
-    flex-direction: row;
-    align-items: center;
-    padding: 1.5rem;
-  }
-
-  @include desktop {
-    padding-left: 6.25rem;
-  }
-
-  &__title {
-    margin: .5rem 2rem 0 0;
-
-    @include between-mobile-tablet {
-      padding-left: 1rem;
-    }
-  }
-
-  &__list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    width:100%;
-  }
-
-  &__item {
-    width: 50%;
-
-    @include between-mobile-tablet {
-      width: 30%
-    }
-
-    @include tablet {
-      width: 20%;
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-    color: $color-white;
-    font-size: .875rem;
-    padding: .3rem 4rem .3rem 3rem;
-
-    @include between-mobile-tablet {
-      margin-right: 3rem; 
-      padding: 1.75rem .5rem;
-    }
-  }
   &__biography {
     font-family: 'AvenirNext LT Pro Demi';
     
@@ -248,6 +188,7 @@
     color: $color-labels;
     font-size: .875rem;
     margin: 1rem 0;
+   
 
     @include between-mobile-tablet {
       display: none;
@@ -257,15 +198,18 @@
   &__date {
     font-family: 'AvenirNext LT Pro Demi';
     font-size: .8125rem;
+    width: 7rem;
   }
 
   &__details {
     font-size: .8125rem;
+    width: 6rem;
   }
 
   &__button {
     @include flex-center;
     @include button;
+    margin-bottom: 1rem;
 
     @include tablet {
       display: flex;
