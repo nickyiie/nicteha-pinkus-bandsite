@@ -434,6 +434,7 @@ body {
 @media (min-width: 460px) {
   .shows__top-label {
     display: flex;
+    justify-content: space-between;
     margin-right: 8rem;
   }
 }
@@ -454,7 +455,7 @@ body {
 }
 .shows__details {
   font-size: 0.8125rem;
-  width: 6rem;
+  width: 8rem;
 }
 .shows__button {
   display: flex;

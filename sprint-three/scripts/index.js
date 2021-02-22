@@ -1,19 +1,3 @@
-// let userComments = [ 
-//   { username: 'Micheal Lyons',
-//     date: '12/18/2018',
-//     comment: 'They BLEW the ROOF off at their last show once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.'
-//   },
-//   { username: 'Gary Wong',
-//     date: '12/12/2018',
-//     comment: 'Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!'
-//   },
-//   { username: 'Theodore Duncan',
-//     date: '11/15/2018',
-//     comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
-//   },
-// ];
-
-
 let gallery = document.querySelector('.gallery');
 let comments = document.createElement('section');
 comments.classList.add('comments');
@@ -111,8 +95,9 @@ let commentDate = cDate.getMonth() + "/" + cDate.getDate() + "/" + cDate.getFull
 // ); 
 
 
-
-form.addEventListener("submit", (event) => {
+let formInteractive = document.querySelector('form');
+console.log(formInteractive);
+formInteractive.addEventListener("submit", (event) => {
   event.preventDefault();
   
   let newComment = {
@@ -164,7 +149,7 @@ form.addEventListener("submit", (event) => {
       form.reset();
     }
     );
-
+let form = document.querySelector('.comments__interactive');
 let commentArray = axios 
   .get('https://project-1-api.herokuapp.com/comments?api_key=nicky')
   .then (response => {
@@ -176,7 +161,7 @@ commentsArray.forEach(function (commentsDisplayBox) {
 
   let commentBox = document.createElement('div');
   commentBox.classList.add('comments__display');
-  comments.appendChild(commentBox);
+  form.insertAdjacentElement('afterend', commentBox);
 
   let image = document.createElement('img');
   image.classList.add('comments__image');

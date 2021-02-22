@@ -180,8 +180,11 @@
 
     @include between-mobile-tablet {
       display: flex;
+      justify-content: space-between;
       margin-right: 8rem;
     }
+
+
   }
 
   &__label {
@@ -203,7 +206,7 @@
 
   &__details {
     font-size: .8125rem;
-    width: 6rem;
+    width: 8rem;
   }
 
   &__button {
