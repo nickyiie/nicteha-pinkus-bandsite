@@ -425,7 +425,8 @@
     width: 10rem;
 
     @include between-mobile-tablet {
-      width: 2rem;
+      width: auto;
+      margin-right: .5rem;
     }
   }
 

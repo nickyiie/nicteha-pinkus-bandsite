@@ -710,6 +710,7 @@ body {
 }
 @media (min-width: 460px) {
   .comments__username {
-    width: 2rem;
+    width: auto;
+    margin-right: 0.5rem;
   }
 }/*# sourceMappingURL=main.css.map */

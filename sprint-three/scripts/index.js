@@ -17,10 +17,10 @@ console.log(interactiveForm);
 interactiveForm.addEventListener("submit", (event) => {
   event.preventDefault();
   
-  let newComment = {
-    'name': event.target.name.value,
-    'comment': event.target.comment.value
-  }
+let newComment = {
+  'name': event.target.name.value,
+  'comment': event.target.comment.value
+}
 
   function displayComment(comment) {
 
@@ -68,31 +68,30 @@ interactiveForm.addEventListener("submit", (event) => {
 axios 
   .post('https://project-1-api.herokuapp.com/comments?api_key=nicky', newComment)
   .then (response => {
-console.log(response)
-    
-    })
-    .catch (error => {
-      console.log(error);
-      let errorMessage = document.createElement('h1');
-      errorMessage.innerText = 'Sorry, comments are currently not available';
-      interactiveForm.appendChild(errorMessage);
-    })  
-    });
+   newComment.unshift(response);
+  })
+  .catch (error => {
+    console.log(error);
+    let errorMessage = document.createElement('h1');
+    errorMessage.innerText = 'Sorry, comments are currently not available';
+    interactiveForm.appendChild(errorMessage);
+  })  
+  });
 
 
 axios 
   .get('https://project-1-api.herokuapp.com/comments?api_key=nicky')
   .then (response => {
-    commentsArray = response.data;
+  commentsArray = response.data;
      
 commentsArray.forEach( 
   
   function (commentObj) {
 
-    let time = new Date (commentObj.timestamp);
-    console.log(time);
-    let cDate = time.getMonth() + "/" + time.getDate() + "/" + time.getFullYear();
-    console.log(cDate);
+  let time = new Date (commentObj.timestamp);
+  console.log(time);
+  let cDate = time.getMonth() + "/" + time.getDate() + "/" + time.getFullYear();
+  console.log(cDate);
 
   let commentBox = document.createElement('div');
   commentBox.classList.add('comments__display');
